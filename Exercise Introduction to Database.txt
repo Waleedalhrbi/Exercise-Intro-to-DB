@@ -50,14 +50,35 @@ CREATE TABLE order_products (
 
 INSERT INTO countries (code, name, continent_name) VALUES (1, 'Egypt', 'Africa');
 
+INSERT INTO countries (code, name, continent_name) VALUES (2, 'Germany', 'Europe');
+
+INSERT INTO countries (code, name, continent_name) VALUES
+(3, 'Canada', 'North America');
+
+
 INSERT INTO users (full_name, email, gender, date_of_birth, country_code)
 VALUES ('Ahmed Ali', 'ahmed@example.com', 'm', '1995-06-15', 1);
 
+INSERT INTO users (full_name, email, gender, date_of_birth, country_code)
+VALUES ('John Doe', 'john@example.com', 'm', '1990-04-10', 2);
+
+INSERT INTO users (full_name, email, gender, date_of_birth, country_code)
+VALUES ('Maria Schmidt', 'maria@example.com', 'f', '1988-12-22', 3);
+
+
 INSERT INTO orders (user_id, status) VALUES (1, 'start');
+INSERT INTO orders (user_id, status) VALUES (2, 'start');
+INSERT INTO orders (user_id, status) VALUES (3, 'finish');
+
+
 
 INSERT INTO products (name, price, status) VALUES ('Laptop', 1500, 'valid');
+INSERT INTO products (name, price, status) VALUES ('Phone', 800, 'valid');
+INSERT INTO products (name, price, status) VALUES ('Tablet', 600, 'expired');
 
 INSERT INTO order_products (order_id, product_id, quantity) VALUES (1, 1, 2);
+INSERT INTO order_products (order_id, product_id, quantity) VALUES (2, 2, 1);
+INSERT INTO order_products (order_id, product_id, quantity) VALUES (3, 3, 5);
 
 # DML - Update Data
 
